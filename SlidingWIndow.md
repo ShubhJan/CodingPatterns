@@ -47,3 +47,56 @@ class Solution {
     }
 }
 ````
+## Q 3 : [Max Consecutive Ones](https://leetcode.com/problems/max-consecutive-ones/)
+
+**Solution :**
+
+````Java
+class Solution {
+    public int findMaxConsecutiveOnes(int[] nums) {
+        int l = 0, r = 0;
+        int len = 0, maxLen = 0;
+        for(r = 0; r < nums.length; r++){
+            if(nums[r] == 0){
+                l = r+1;
+            }else{
+                len = r - l + 1;
+            }
+            maxLen = Math.max(maxLen, len);
+        }
+        return maxLen;
+    }
+}
+````
+
+## Q 4 : [Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)
+
+**Solution :**
+
+````Java
+class Solution {
+    public int longestOnes(int[] nums, int k) {
+        int n = nums.length;
+        int maxLen = 0, len = 0, zeros = 0;
+        int l = 0, r = 0;
+        while(r < n){
+            if(nums[r] == 0){
+                zeros++;
+            }
+            if(zeros > k){
+                if(nums[l] == 0)    zeros--;
+                l++;
+            }
+            if(zeros <= k){
+                len = r - l + 1;
+                maxLen = Math.max(maxLen, len);
+            }
+
+            r++;
+        }
+
+        return maxLen;
+    }
+}
+````
+
