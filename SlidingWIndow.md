@@ -100,3 +100,35 @@ class Solution {
 }
 ````
 
+## Q 5 : [Longest Substring with at most/equal to k distinct characters](https://www.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card)
+
+**Solution :**
+
+````Java
+class Solution {
+    public int longestkSubstr(String s, int k) {
+        // code here
+        int maxLen = 0;
+        HashMap<Character, Integer> hmap = new HashMap<>();
+        int l = 0, r = 0;
+        int n = s.length();
+        while(r < n){
+            hmap.put(s.charAt(r), hmap.getOrDefault(s.charAt(r),0)+1);
+            
+            if(hmap.size() > k){
+                if(hmap.get(s.charAt(l)) == 1){
+                    hmap.remove(s.charAt(l));
+                }else{
+                   hmap.put(s.charAt(l), hmap.get(s.charAt(l)) - 1);
+                }
+                l++;
+            }
+            if(hmap.size() == k)    maxLen = Math.max(maxLen, r - l + 1);
+            // maxLen = Math.max(maxLen, r - l + 1);
+            r++;
+        }
+        
+        return (maxLen == 0) ? -1 : maxLen;
+    }
+}
+````
