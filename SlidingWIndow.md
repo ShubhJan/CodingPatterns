@@ -1,5 +1,5 @@
 # Pattern 1 : Sliding Window
-## Q 1 : [Longest Substring Without Repeating Characters]( https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
+## Q 1 : [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/description/)
 
 **Solution :**
 
