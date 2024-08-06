@@ -100,7 +100,7 @@ class Solution {
 }
 ````
 
-## Q 5 : [Longest Substring with at most/equal to k distinct characters](https://www.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card)
+## Q 5 : [Longest Substring with at most/equal to k distinct characters]( https://www.geeksforgeeks.org/problems/longest-k-unique-characters-substring0853/1?itm_source=geeksforgeeks&itm_medium=article&itm_campaign=practice_card)
 
 **Solution :**
 
